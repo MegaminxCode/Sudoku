@@ -23,5 +23,4 @@ fixed check neighbour not recognising flagged bees and displaying blank when all
 [*]  To Do  [*]
 Fix random color so its only called once.
 Fix so you cant cheat and geuss the last bee by flagging and unflagging.
-( [^] add var last bee = false; look through the grid find the bee. set bee false and last bee true
-make it so totalbees + 1 and if right click last bee -2).
+( [^] add a check for all tiles revealed so that players can't cheat the last bee(if they flag all bees they don't win)).
