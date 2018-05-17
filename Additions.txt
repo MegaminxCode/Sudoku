@@ -1,0 +1,27 @@
+[*]  Completed  [*]
+Removed right click menu (chrome)
+Added ability to right click.
+Added flags(had to disable bees to make it appear).
+added ability to win by flagging all bees.
+when the game is over all flags are disabled
+when you flag incorrectly after you lose it makes the error red.
+when the game is over all flags that were bees become bees even though I disabled the bees.
+added gameover if you flag incorrectly 4 times(added wrong counter).
+added win(if you flag all bees|| all set green).
+added loss(when gameover is called|| all set orange/errors left).
+added random colour(coz why not!).
+changed so flags cant be set on revealed tiles.
+added so flags can be removed without breaking the tile!!!!!
+fixed the wrong counter when removing flags.
+removed the wrong counter and replaced by adding bees to the total so it cant reach 0.
+removed floodfill when flagging.
+removed rainbow from behind bees when game is over.
+fixed gameWon not being called after all errors are fixed(only being called on reveal ! on unflag).
+fixed check neighbour not recognising flagged bees and displaying blank when all bees flagged.
+[*]  Completed^ [*]
+
+[*]  To Do  [*]
+Fix random color so its only called once.
+Fix so you cant cheat and geuss the last bee by flagging and unflagging.
+( [^] add var last bee = false; look through the grid find the bee. set bee false and last bee true
+make it so totalbees + 1 and if right click last bee -2).
