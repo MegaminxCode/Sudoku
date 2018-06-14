@@ -12,10 +12,10 @@ function make2DArray (cols, rows) {
 var grid;
 var cols;
 var rows;
-var w = 40;
+var w = 20;
 
 var rTiles;
-var totalBees = 5;
+var totalBees = 70;
 var flags = 20;
 
 
