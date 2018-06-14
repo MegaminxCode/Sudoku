@@ -20,8 +20,9 @@ fixed gameWon not being called after all errors are fixed(only being called on r
 fixed check neighbour not recognising flagged bees and displaying blank when all bees flagged.
 Fixed so you cant cheat and geuss the last bee by flagging and unflagging.
 ( [^] added a check for all tiles revealed so that players can't cheat the last bee(if they flag all bees they don't win)).
+Fixed random color so its only called once.
 [*]  Completed^ [*]
 
 [*]  To Do  [*]
-Fix random color so its only called once.
+
 Add a reset button.
