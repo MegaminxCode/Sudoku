@@ -12,6 +12,21 @@ function Cell(i, j, w) {
 	this.wrong = false;
 	this.won = false;
 	this.gameOver = false;
+    this.color1 = false;
+    this.color2 = false;
+    this.color3 = false;
+    this.color4 = false;
+    this.color5 = false;
+    this.color6 = false;
+    this.color7 = false;
+    this.color8 = false;
+    this.color9 = false;
+    this.color10 = false;
+    this.color11 = false;
+    this.color12 = false;
+    this.color13 = false;
+    this.color14 = false;
+    this.color15 = false;
 }
 
 Cell.prototype.show = function() {
@@ -21,8 +36,53 @@ Cell.prototype.show = function() {
 	if(!this.gameover) {
 		stroke(0);
 		//noFill();
-		frameRate(4);
-		fill(random(0, 255), random(0, 255), random(0, 255));
+		
+        
+        if(this.color1){
+            fill(237, 2, 11);
+        }else if(this.color2){
+            
+            fill(244, 0, 40);
+        } else if(this.color3){
+            
+            fill(255, 202, 43);
+        } else if(this.color4){
+            
+            fill(238, 47, 127);
+        } else if(this.color5){
+            
+            fill(241, 80, 149);
+        } else if(this.color6){
+            
+            fill(255, 169, 206);
+        }else if(this.color7){
+            
+            fill(64, 120, 211);
+        } else if(this.color8){
+            
+            fill(80, 168, 227);
+        } else if(this.color9){
+            
+            fill(173, 222, 250);
+        } else if(this.color10){
+            
+            fill(127, 176, 5);
+        } else if(this.color11){
+            
+            fill(184, 214, 4);
+        }else if(this.color12){
+            
+            fill(204, 255, 0);
+        } else if(this.color13){
+            
+            fill(124, 20, 77);
+        } else if(this.color14){
+            
+            fill(127, 66, 51);
+        } else if(this.color15){
+            
+            fill(108, 92, 50);
+        }
 		rect(this.x, this.y, this.w, this.w);
 	}
 	if (this.revealed) {
