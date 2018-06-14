@@ -19,10 +19,10 @@ removed rainbow from behind bees when game is over.
 fixed gameWon not being called after all errors are fixed(only being called on reveal ! on unflag).
 fixed check neighbour not recognising flagged bees and displaying blank when all bees flagged.
 Fixed so you cant cheat and geuss the last bee by flagging and unflagging.
-( [^] added a check for all tiles revealed so that players can't cheat the last bee(if they flag all bees they don't win)).
+( [^] added a check for all tiles revealed so that players can't cheat the last bee(if they flag all bees they don't win)).triple fixed.
 Fixed random color so its only called once.
 [*]  Completed^ [*]
 
 [*]  To Do  [*]
-
+Mine counter display
 Add a reset button.

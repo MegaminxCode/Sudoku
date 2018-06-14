@@ -168,6 +168,7 @@ function mousePressed () {
 						}else {
 							grid[i][j].wrong = true;
 							totalBees++;
+                            rTiles--;
 						}
 						grid[i][j].bee = false;
 						grid[i][j].revealed = true;
