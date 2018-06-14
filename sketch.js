@@ -12,7 +12,7 @@ function make2DArray (cols, rows) {
 var grid;
 var cols;
 var rows;
-var w = 20;
+var w = 28;
 
 var rTiles;
 var totalBees = 70;
@@ -20,7 +20,7 @@ var flags = 20;
 var a;
 
 function setup(){
-	createCanvas(441, 441);
+	createCanvas(617, 617);
 	cols = floor (width / w);
 	rows = floor (height / w);
     rTiles = floor (cols * rows);
@@ -151,11 +151,14 @@ function mousePressed () {
 			
 			if(grid[i][j].contains(mouseX, mouseY)) {
 				if (mouseButton === LEFT) {
-					grid[i][j].reveal();
-				
-					if (grid[i][j].bee) {
-						gameOver();
-					}
+                    if (grid[i][j].bee) {
+                        gameOver();
+                    }
+                    if(grid[i][j].revealed){
+                        return;
+                    }else if (!grid[i][j].revealed) {
+                        grid[i][j].reveal();
+                    }
 				}
 				if (mouseButton === RIGHT) {
 					if(!grid[i][j].revealed){

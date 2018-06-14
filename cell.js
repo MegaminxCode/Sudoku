@@ -114,6 +114,7 @@ Cell.prototype.show = function() {
 				textAlign(CENTER);
 				fill(0);
 				text(this.neighbourCount, this.x + this.w * 0.5, this.y + this.w - 6);
+              
 			}
 		}
 		
