@@ -15,7 +15,7 @@ function Cell(i, j, w) {
 }
 
 Cell.prototype.show = function() {
-	if (totalBees == 0) {
+	if (rTiles <= 0 && totalBees == 0) {
 		gameWon();
 	}
 	if(!this.gameover) {
@@ -91,7 +91,7 @@ Cell.prototype.contains = function (x, y) {
 
 Cell.prototype.reveal = function (x, y) {
 	this.revealed = true;		
-	
+    rTiles--;
 	if (this.neighbourCount == 0) {
 		this.floodFill();
 	}
