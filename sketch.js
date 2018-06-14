@@ -176,12 +176,14 @@ function mousePressed () {
 						grid[i][j].flag = false;
 						grid[i][j].bee = true;
 						totalBees++;
+						rTiles++;
 					} else if(grid[i][j].flag && grid[i][j].wrong) {
 						grid[i][j].revealed = false;
 						grid[i][j].flag = false;
 						grid[i][j].wrong = false;
 						grid[i][j].countNeighbours();
 						totalBees--;
+						rTiles++;
 					}
 				}
 			}
