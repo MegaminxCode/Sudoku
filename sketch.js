@@ -15,12 +15,15 @@ var rows;
 var w = 28;
 
 var rTiles;
-var totalBees = 70;
+var totalBees = 90;
 var flags = 20;
 var a;
+var startTiles = 5;
+var buffer = 0;
+var t = 0;;
 
 function setup(){
-	createCanvas(617, 617);
+	createCanvas(645, 645);
 	cols = floor (width / w);
 	rows = floor (height / w);
     rTiles = floor (cols * rows);
@@ -106,6 +109,34 @@ function setup(){
                 grid[i][j].color15 = true;
             }
             
+        }
+    }
+    for (var s = 0; s < startTiles; s++) {
+        var index = floor(random(options.length));
+        var choice = options[index];
+        var i = choice[0];
+        var j = choice[1];
+        options.splice(index, 1);
+        grid[i][j].reveal();
+        if(grid[i][j].neighbourCount == 0){
+            
+            return;
+        }else if(grid[i][j].neighbourCount > 0){
+            
+            buffer++;
+        }
+    }
+    if(buffer == startTiles){
+        for (var i = 0; i < cols; i++) {
+            for (var j = 0; j < rows; j++) {
+                if(grid[i][j].neighbourCount == 0){
+                    
+                    grid[i][j].reveal();
+                    
+                    return;
+                    
+                }
+            }
         }
     }
 }
