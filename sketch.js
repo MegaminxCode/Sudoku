@@ -16,7 +16,6 @@ var w = 28;
 
 var rTiles;
 var totalBees = 90;
-var flags = 20;
 var a;
 var startTiles = 3;
 var buffer = 0;
