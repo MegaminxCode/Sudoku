@@ -20,7 +20,7 @@ var flags = 20;
 var a;
 var startTiles = 5;
 var buffer = 0;
-var t = 0;;
+
 
 function setup(){
 	createCanvas(645, 645);
