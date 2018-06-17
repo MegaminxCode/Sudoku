@@ -29,3 +29,4 @@ Mine counter display
 Add a reset button.
 Add timer
 Add function to reveal all tiles around a marked tile if left clicked(or double clicked).
+Fix font on Mac(set the meta thing to utf-8 in index

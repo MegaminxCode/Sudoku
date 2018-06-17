@@ -15,14 +15,14 @@ var rows;
 var w = 28;
 
 var rTiles;
-var totalBees = 90;
+var totalBees = 150;
 var a;
-var startTiles = 3;
-var buffer = 0;
-
-
+var startTiles = 4;
+var test = 0;
+var options = [];
+var optionsb = [];
 function setup(){
-	createCanvas(645, 645);
+	createCanvas(757, 757);
 	cols = floor (width / w);
 	rows = floor (height / w);
     rTiles = floor (cols * rows);
@@ -35,7 +35,7 @@ function setup(){
 		}
 	}
 	
-	var options = [];
+	
 	for (var i = 0; i < cols; i++) {
 		for (var j = 0; j < rows; j++) {
 			options.push([i, j]);
@@ -110,29 +110,22 @@ function setup(){
             
         }
     }
-    for (var s = 0; s < startTiles; s++) {
-        var index = floor(random(options.length));
-        var choice = options[index];
-        var i = choice[0];
-        var j = choice[1];
-        options.splice(index, 1);
-        grid[i][j].reveal();
-        if(grid[i][j].neighbourCount > 0){
+    for (var i = 0; i < cols; i++) {
+        for (var j = 0; j < rows; j++) {
             
-            buffer++;
-        }
-    }
-    if(buffer == startTiles){
-        for (var i = 0; i < cols; i++) {
-            for (var j = 0; j < rows; j++) {
-                if(grid[i][j].neighbourCount == 0){
-                    
-                    grid[i][j].reveal();
-                    return;
-                    
-                }
+            if(grid[i][j].neighbourCount ==0){
+                optionsb.push([i, j]);
             }
         }
+    }
+    for (var s = 0; s < startTiles; s++) {
+        var index = floor(random(optionsb.length));
+        
+        var choice = optionsb[index];
+        var i = choice[0];
+        var j = choice[1];
+        optionsb.splice(index, 1);
+        grid[i][j].reveal();
     }
 }
 
