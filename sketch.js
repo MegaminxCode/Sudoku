@@ -213,6 +213,13 @@ function mousePressed () {
 						rTiles++;
 					}
 				}
+				if (mouseButton === CENTER){
+					if(grid[i][j].revealed && !grid[i][j].bee && !grid[i][j].flag && grid[i][j].neighbourCount > 0){
+						grid[i][j].countFlags();
+					}else {
+						return;
+					}
+				}
 			}
 		}
 	}

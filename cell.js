@@ -143,6 +143,43 @@ Cell.prototype.countNeighbours = function (x, y) {
 	this.neighbourCount = total;
 }
 
+Cell.prototype.countFlags = function(x, y) {
+	
+	var total = 0;
+	
+	for(xoff = -1; xoff <= 1; xoff++) {
+		for(yoff = -1; yoff <= 1; yoff++) {
+			var i = this.i + xoff;
+			var j = this.j + yoff;
+			if (i > -1 && i < cols && j > -1 && j < rows) {
+				var flagged = grid[i][j];
+				if(flagged.flag) {
+					total++;
+				}
+			}
+		}
+	}
+	
+	if(this.neighbourCount == total){
+		for(xoff = -1; xoff <= 1; xoff++) {
+			for(yoff = -1; yoff <= 1; yoff++) {
+				var i = this.i + xoff;
+				var j = this.j + yoff;
+				if (i > -1 && i < cols && j > -1 && j < rows) {
+					if(!grid[i][j].revealed){
+						grid[i][j].reveal();
+						if(grid[i][j].bee){
+							gameOver();
+						}
+					}
+				}
+			}
+		}
+	}else{
+		return;
+	}
+}
+
 Cell.prototype.contains = function (x, y) {
 	
 	return(x > this.x && x < this.x + this.w && y > this.y && y < this.y + this.w); 
