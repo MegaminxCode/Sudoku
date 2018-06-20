@@ -26,7 +26,7 @@ function setup(){
 	cols = floor (width / w);
 	rows = floor (height / w);
 	totalBees = floor((cols * rows) * random(0.16, 0.21));
-    rTiles = floor (cols * rows);
+    rTiles = cols * rows;
 	grid = make2DArray(cols, rows);
 	for (var i = 0; i < cols; i++) {
 		for (var j = 0; j < rows; j++) {
@@ -125,8 +125,10 @@ function setup(){
         var choice = optionsb[index];
         var i = choice[0];
         var j = choice[1];
-        optionsb.splice(index, 1);
-        grid[i][j].reveal();
+		if(!grid[i][j].revealed){
+			optionsb.splice(index, 1);
+			grid[i][j].reveal();
+		}
     }
 }
 
@@ -188,16 +190,16 @@ function mousePressed () {
 					if(!grid[i][j].revealed){
 						if (grid[i][j].bee){
 							totalBees--;
-                            rTiles--;
+                            
 						}else {
 							grid[i][j].wrong = true;
 							totalBees++;
-                            rTiles--;
+                            
 						}
 						grid[i][j].bee = false;
 						grid[i][j].revealed = true;
 						grid[i][j].flag = true;
-						
+						rTiles--;
 						
 					}else if(grid[i][j].flag && !grid[i][j].wrong){
 						grid[i][j].revealed = false;
@@ -212,6 +214,11 @@ function mousePressed () {
 						grid[i][j].countNeighbours();
 						totalBees--;
 						rTiles++;
+					}
+					if(grid[i][j].revealed){
+						
+						return;
+						
 					}
 				}
 				if (mouseButton === CENTER){

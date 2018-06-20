@@ -30,7 +30,8 @@ function Cell(i, j, w) {
 }
 
 Cell.prototype.show = function() {
-	if (rTiles <= 0 && totalBees == 0) {
+	
+	if (rTiles == 0 && totalBees == 0) {
 		gameWon();
 	}
 	if(!this.gameover) {
