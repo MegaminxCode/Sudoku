@@ -15,7 +15,7 @@ var rows;
 var w = 28;
 
 var rTiles;
-var totalBees = 150;
+var totalBees;
 var a;
 var startTiles = 4;
 var test = 0;
@@ -25,6 +25,7 @@ function setup(){
 	createCanvas(757, 757);
 	cols = floor (width / w);
 	rows = floor (height / w);
+	totalBees = floor((cols * rows) * random(0.16, 0.21));
     rTiles = floor (cols * rows);
 	grid = make2DArray(cols, rows);
 	for (var i = 0; i < cols; i++) {
