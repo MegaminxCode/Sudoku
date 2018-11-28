@@ -61,54 +61,8 @@ function setup(){
 	}
     for (var i = 0; i < cols; i++) {
         for (var j = 0; j < rows; j++) {
-            a = floor(random(0, 14));
-            if(a == 0){
-                
-                grid[i][j].color1 = true;
-            }else if(a == 1){
-                
-                grid[i][j].color2 = true;
-            } else if(a == 2){
-                
-                grid[i][j].color3 = true;
-            } else if(a == 3){
-                
-                grid[i][j].color4 = true;
-            } else if(a == 4){
-                
-                grid[i][j].color5 = true;
-            } else if(a == 5){
-                
-                grid[i][j].color6 = true;
-            }else if(a == 6){
-                
-                grid[i][j].color7 = true;
-            } else if(a == 7){
-                
-                grid[i][j].color8 = true;
-            } else if(a == 8){
-                
-                grid[i][j].color9 = true;
-            } else if(a == 9){
-                
-                grid[i][j].color10 = true;
-            } else if(a == 10){
-                
-                grid[i][j].color11 = true;
-            }else if(a == 11){
-                
-                grid[i][j].color12 = true;
-            } else if(a == 12){
-                
-                grid[i][j].color13 = true;
-            } else if(a == 13){
-                
-                grid[i][j].color14 = true;
-            } else if(a == 14){
-                
-                grid[i][j].color15 = true;
-            }
-            
+            a = "color" + floor(random(1, 15));
+            grid[i][j][a] = true;
         }
     }
     for (var i = 0; i < cols; i++) {
