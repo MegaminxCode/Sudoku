@@ -1,32 +1,6 @@
 [*]  Completed  [*]
-Removed right click menu (chrome)
-Added ability to right click.
-Added flags(had to disable bees to make it appear).
-added ability to win by flagging all bees.
-when the game is over all flags are disabled
-when you flag incorrectly after you lose it makes the error red.
-when the game is over all flags that were bees become bees even though I disabled the bees.
-added gameover if you flag incorrectly 4 times(added wrong counter).
-added win(if you flag all bees|| all set green).
-added loss(when gameover is called|| all set orange/errors left).
-added random colour(coz why not!).
-changed so flags cant be set on revealed tiles.
-added so flags can be removed without breaking the tile!!!!!
-fixed the wrong counter when removing flags.
-removed the wrong counter and replaced by adding bees to the total so it cant reach 0.
-removed floodfill when flagging.
-removed rainbow from behind bees when game is over.
-fixed gameWon not being called after all errors are fixed(only being called on reveal ! on unflag).
-fixed check neighbour not recognising flagged bees and displaying blank when all bees flagged.
-Fixed so you cant cheat and geuss the last bee by flagging and unflagging.
-( [^] added a check for all tiles revealed so that players can't cheat the last bee(if they flag all bees they don't win)).triple fixed.
-Fixed random color so its only called once.
-Added start click feature.
+
 [*]  Completed^ [*]
 
 [*]  To Do  [*]
-Mine counter display
-Add a reset button.
-Add timer
-Add function to reveal all tiles around a marked tile if left clicked(or double clicked).
-Fix font on Mac(set the meta thing to utf-8 in index
+change to sudoku
